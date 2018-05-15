@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>My Tasks</h1>
+  <ul class="">
+    <% @tasks.each do |task| %>
+      <% if task.completed %>
+        <li><i class="far fa-square"></i> <%= link_to task.title , show_path(task.id) %></li>
+      <% else %>
+        <li><i class="far fa-check-square"></i> <%= link_to task.title , show_path(task.id) %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
